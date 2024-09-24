@@ -1,11 +1,10 @@
 body{
     position: relative;
     margin: 0;
-    font-family: "Peralta", serif;
     font-weight: 400;
     font-style: normal;
 }
-.header{
+header{
     position: fixed;
     width: 100%;
     height: 70px;;
@@ -24,6 +23,7 @@ body{
     position: relative;
     margin-left: 4px;
     padding-right: 4px;
+    font-family: Brush Script MT, sans-serif;
 }
 .header-name-text{
     font-size: 48px;
@@ -43,6 +43,9 @@ body{
     display: flex;
     justify-items: right;
     margin-right:12px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -60,6 +63,9 @@ body{
     border-radius: 26px;
     margin-right: 10px;
     border: 2px solid #000000;
+    font-weight: 600;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: rgba(20, 20, 20, 0.1) 4px 4px 4px, rgba(61, 61, 61, 0.16) 8px 8px 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .header-account:hover{
@@ -73,65 +79,183 @@ body{
     margin-right: 4px;
     margin-bottom: 4px;
 }
-.search-box{
+.search-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    height: 100px;
+    width: 84%;
+    height: 120px;
     margin-top: 200px;
-    background-color: #a4d7eb9f;
-    border-radius: 16px;
-    border: 2px solid rgb(99, 99, 99);
-    box-shadow: rgba(20, 20, 20, 0.1) 2px 4px 8px, rgba(61, 61, 61, 0.16) 8px 8px 18px;
+    background-color: rgba(36, 192, 253, 0.8);
+    border-radius: 20px;
+    border: 1px solid rgba(99, 99, 99, 0.5);
+    box-shadow: rgba(20, 20, 20, 0.1) 2px 4px 10px, rgba(61, 61, 61, 0.16) 0px 8px 20px;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
+.search-box:hover {
+    background-color:#50cdffc8;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 20px;
 }
-.search-box-text1{
-    width: 220px;
+
+.search-box-text1,
+.search-box-text2,
+.search-box-text3,
+.search-box-text4 {
+    width: 250px;
     background-color: white;
-    padding-bottom: 40px;
-    border-right: 2px solid rgb(99, 99, 99);
+    padding: 16px 0;
+    border-right: 1px solid rgba(99, 99, 99, 0.5);
+    border-radius: 10px;
+    box-shadow: rgba(20, 20, 20, 0.1) 2px 4px 6px;
     text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.search-box-text2{
-    width: 220px;
-    background-color: white;
-    padding-bottom: 40px;
-    border-right: 2px solid rgb(99, 99, 99);
-    text-align: center;
+
+.search-box-text1:hover,
+.search-box-text2:hover,
+.search-box-text3:hover,
+.search-box-text4:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px;
+    transform: translateY(-2px);
 }
-.search-box-text3{
-    width: 220px;
-    background-color: white;
-    padding-bottom: 40px;
-    border-right: 2px solid rgb(99, 99, 99);
-    text-align: center;
+
+.search-box-button {
+    display: flex;
+    background-color: #F9E400;
+    border-radius: 8px;
+    width: 150px;
+    height: 50px;
+    margin-left: 32px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(20, 20, 20, 0.1) 2px 4px 10px, rgba(61, 61, 61, 0.16) 0px 8px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
 }
-.search-box-text4{
-    width: 220px;
-    background-color: white;
-    padding-bottom: 40px;
-    text-align: center;
+
+.search-box-button:focus {
+    outline: none;
 }
-.search-box-button{
-    background-color: white;
-    border-radius: 4px;
-    padding-bottom: 40px;
-    padding-right: 40px;
-    text-align: center;
+
+.search-box-button:hover {
+    background-color: #e3d42f;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 20px;
 }
-.searching-page1{
+
+.searching-page1 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-.searching-image{
+
+.searching-image {
     display: flex;
 }
-.searching-page-container{
+
+.searching-page-container {
     display: flex;
     justify-content: center;
     margin-top: 70px;
     width: 100%;
     height: 500px;
     background-image: url(https://media.coraltravel.pl/www/pl/country/65/iStock-836578962-PP-2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.text1-select,
+.text3-select,
+.text4-select {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 90%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.text2-select{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 83%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text1-select:focus,
+.text2-select:focus,
+.text3-select:focus,
+.text4-select:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+
+.body-site {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.body-garanties-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    height: 135px;
+}
+
+.body-garanties-box div {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.body-garanties-box div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.body-garanties-box-block1-image,
+.body-garanties-box-block2-image,
+.body-garanties-box-block3-image {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.body-garanties-box p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    line-height: 1.5;
+}
+
+.body-garanties-box-block1 {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+}
+
+.body-garanties-box-block2 {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4caf50;
+}
+
+.body-garanties-box-block3 {
+    background-color: #fce4ec;
+    border-left: 4px solid #f50057;
 }
